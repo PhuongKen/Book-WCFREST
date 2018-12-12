@@ -1,0 +1,65 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="WCFBook.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WCFBook"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+                            >
+    <Page.Resources>
+        <DataTemplate x:Key="GridViewBookDataTemplate">
+            <Grid Width="300" Background="#FF5D5AA0" Height="102">
+                <StackPanel Margin="15,5,0,0" Orientation="Horizontal" VerticalAlignment="Top">
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Book ID:"
+                               VerticalAlignment="Top" FontSize="20"/>
+                    <TextBlock VerticalAlignment="Top" TextWrapping="NoWrap" Text="{Binding BookId}"
+                               Margin="5,0,0,0" FontSize="20"/>
+                </StackPanel>
+                <StackPanel Margin="15,30,0,0" Orientation="Horizontal" VerticalAlignment="Top">
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Title:"
+                               VerticalAlignment="Top" FontSize="20"/>
+                    <TextBlock VerticalAlignment="Top" TextWrapping="NoWrap" Text="{Binding Title}"
+                               Margin="5,0,0,0" FontSize="20"/>
+                </StackPanel>
+                <StackPanel Margin="15,55,0,0" Orientation="Horizontal" VerticalAlignment="Top">
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="ISBN:"
+                               VerticalAlignment="Top" FontSize="20"/>
+                    <TextBlock VerticalAlignment="Top" TextWrapping="NoWrap" Text="{Binding ISBN}"
+                               Margin="5,0,0,0" FontSize="20"/>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <GridView x:ConnectionId='2' x:Name="GridViewBook" Margin="480,80,0,30"
+                                                                  
+                  ItemTemplate="{StaticResource GridViewBookDataTemplate}" FontSize="30"/>
+        <StackPanel Margin="100,80,0,0" Width="295" HorizontalAlignment="Left">
+            <TextBlock TextWrapping="Wrap" Text="Book ID:" FontFamily="Segoe UI" FontSize="20"
+                       FontWeight="Light" Margin="0,0,0,5"/>
+            <TextBox x:ConnectionId='4' x:Name="TextBoxId" TextWrapping="Wrap" Margin="0,0,0,10" FontSize="20"/>
+
+            <TextBlock TextWrapping="Wrap" Text="Title:" FontFamily="Segoe UI" FontSize="20"
+                       FontWeight="Light" Margin="0,0,0,5"/>
+            <TextBox x:ConnectionId='5' x:Name="TextBoxTitle" TextWrapping="Wrap" Margin="0,0,0,10" FontSize="20"/>
+
+            <TextBlock TextWrapping="Wrap" Text="ISBN:" FontFamily="Segoe UI" FontSize="20"
+                       FontWeight="Light" Margin="0,5,0,0"/>
+            <TextBox x:ConnectionId='6' x:Name="TextBoxISBN" TextWrapping="Wrap" Margin="0,0,0,10" FontSize="20"/>
+
+            <Button x:ConnectionId='7' x:Name="ButtonAdd" Content="Add new Book" HorizontalAlignment="Left"
+                    VerticalAlignment="Stretch" Margin="0,0,0,10" Width="295"                        
+                    FontSize="20" Height="50"/>
+            <Button x:ConnectionId='8' x:Name="ButtonDelete" Content="Delete Selected Book" HorizontalAlignment="Left"
+                    VerticalAlignment="Stretch" Margin="0,0,0,10" Width="295"                           
+                    FontSize="20" Height="45"/>
+            <Button x:ConnectionId='9' x:Name="ButtonModify" Content="Modify Selected Book" HorizontalAlignment="Left"
+                    VerticalAlignment="Stretch" Margin="0,0,0,10" Width="295"                           
+                    FontSize="20" Height="43"/>
+        </StackPanel>
+        <ProgressBar x:ConnectionId='3' x:Name="ProgressBar" VerticalAlignment="Top" Visibility="Collapsed"/>
+    </Grid>
+</Page>
+
+
