@@ -61,13 +61,15 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BookService.svc" />
-    <Content Include="Web.config" />
+    <Content Include="BookServices.svc" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Book.cs" />
-    <Compile Include="BookService.svc.cs">
-      <DependentUpon>BookService.svc</DependentUpon>
+    <Compile Include="BookServices.svc.cs">
+      <DependentUpon>BookServices.svc</DependentUpon>
     </Compile>
     <Compile Include="IBookService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

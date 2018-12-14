@@ -4,3 +4,4 @@ E:\Sem 3\Book-WCFREST\Book-WCFREST\bin\Book-WCFREST.dll
 E:\Sem 3\Book-WCFREST\Book-WCFREST\bin\Book-WCFREST.pdb
 E:\Sem 3\Book-WCFREST\Book-WCFREST\obj\Debug\Book-WCFREST.dll
 E:\Sem 3\Book-WCFREST\Book-WCFREST\obj\Debug\Book-WCFREST.pdb
+E:\Sem 3\Book-WCFREST\Book-WCFREST\obj\Debug\Book-WCFREST.csprojAssemblyReference.cache

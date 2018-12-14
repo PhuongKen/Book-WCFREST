@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Book_WCFREST.Service1" CodeBehind="BookServices.svc.cs" %>
